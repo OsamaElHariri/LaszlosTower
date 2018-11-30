@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/HouseDoorCloseSFX.wav-f572d3de6152deb0e36d3d537a7e04b7.sample"
+
+[deps]
+
+source_file="res://Audio/HouseDoorCloseSFX.wav"
+source_md5="d65e3c92ae9297f3b3ac64f67c6f113b"
+
+dest_files=[ "res://.import/HouseDoorCloseSFX.wav-f572d3de6152deb0e36d3d537a7e04b7.sample" ]
+dest_md5="44ff700c221d4374adba206efb854c3d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

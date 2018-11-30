@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/SectionDiscardSFX.wav-a4c8f3005cc1408e7a55e721e58a68db.sample"
+
+[deps]
+
+source_file="res://Audio/SectionDiscardSFX.wav"
+source_md5="eea60c4a4649b3857bb40b7842fc01e7"
+
+dest_files=[ "res://.import/SectionDiscardSFX.wav-a4c8f3005cc1408e7a55e721e58a68db.sample" ]
+dest_md5="befc66eb21b2e73f3d8a0fb4ffbebb89"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

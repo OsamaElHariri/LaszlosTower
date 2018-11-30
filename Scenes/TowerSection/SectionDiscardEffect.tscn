@@ -1,0 +1,286 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://Scripts/TowerSection/SectionDiscardEffect.gd" type="Script" id=1]
+[ext_resource path="res://Art/Tower/TowerSection.png" type="Texture" id=2]
+[ext_resource path="res://Art/Environment/SmokeCloud.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Audio/SfxPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/SectionDiscardSFX.wav" type="AudioStream" id=5]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.863905, 1 )
+colors = PoolColorArray( 0.277344, 0.277344, 0.277344, 1, 0.292946, 0.292946, 0.292946, 1, 0.296875, 0.296875, 0.296875, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 1 ), 0.0, 1.19823, 0, 0, Vector2( 0.99953, 0.854492 ), -2.08429, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 0.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1000.0
+initial_velocity_random = 0.0
+angular_velocity = 6.29183e-43
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Initial Velocity", "Scale" ]
+
+[sub_resource type="Gradient" id=6]
+
+offsets = PoolRealArray( 0, 0.852071, 1 )
+colors = PoolColorArray( 0.398438, 0.0544739, 0.0544739, 1, 0.09375, 0.0871582, 0.0871582, 1, 0.144531, 0.144531, 0.144531, 0.270706 )
+
+[sub_resource type="GradientTexture" id=7]
+
+flags = 4
+gradient = SubResource( 6 )
+width = 2048
+
+[sub_resource type="Curve" id=8]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.682617 ), 0.0, 3.35387, 0, 0, Vector2( 1, 0.371094 ), -3.94804, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=9]
+
+flags = 4
+width = 2048
+curve = SubResource( 8 )
+
+[sub_resource type="ParticlesMaterial" id=10]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 25.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1000.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 0.7
+scale_random = 0.4
+scale_curve = SubResource( 9 )
+color_ramp = SubResource( 7 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Gravity", "Initial Velocity", "Scale", "Spread" ]
+
+[sub_resource type="Gradient" id=11]
+
+offsets = PoolRealArray( 0, 0.633136, 1 )
+colors = PoolColorArray( 0.320313, 0.320313, 0.320313, 1, 0.289063, 0.289063, 0.289063, 1, 0.0898438, 0.0898438, 0.0898438, 0 )
+
+[sub_resource type="GradientTexture" id=12]
+
+flags = 4
+gradient = SubResource( 11 )
+width = 2048
+
+[sub_resource type="Curve" id=13]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0.242187 ), 0.0, 1.30563, 0, 0, Vector2( 1, 0.693359 ), -3.11095, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=14]
+
+flags = 4
+width = 2048
+curve = SubResource( 13 )
+
+[sub_resource type="ParticlesMaterial" id=15]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 180.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 338.98
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 100.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 14 )
+color_ramp = SubResource( 12 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Damping", "Initial Velocity", "Scale", "Spread" ]
+
+[node name="SectionDiscardEffect" type="Position2D" index="0"]
+
+scale = Vector2( 0.3, 0.3 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Process Material", "Transform" ]
+
+[node name="Section" type="Particles2D" parent="." index="0"]
+
+emitting = false
+amount = 1
+lifetime = 0.4
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 5 )
+texture = ExtResource( 2 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="Debris" type="Particles2D" parent="." index="1"]
+
+emitting = false
+amount = 8
+lifetime = 0.5
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.9
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 10 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="SmokeCloud" type="Particles2D" parent="." index="2"]
+
+emitting = false
+amount = 8
+lifetime = 0.6
+one_shot = true
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.9
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 15 )
+texture = ExtResource( 3 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+[node name="Timer" type="Timer" parent="." index="3"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = false
+autostart = false
+
+[node name="SfxPlayer" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( -8.61155, -8.73891 )
+stream = ExtResource( 5 )
+volume = -14
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LeftFootStepSFX.wav-e4c6e17997b50bdbc99d851f4a1c52db.sample"
+
+[deps]
+
+source_file="res://Audio/LeftFootStepSFX.wav"
+source_md5="30f9357e4d5587cd65d7abc82d0f3717"
+
+dest_files=[ "res://.import/LeftFootStepSFX.wav-e4c6e17997b50bdbc99d851f4a1c52db.sample" ]
+dest_md5="ba21521b3805f1b076e082660b28ec68"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

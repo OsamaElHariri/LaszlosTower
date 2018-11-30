@@ -1,0 +1,165 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Art/Tower/CockPit.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/TowerSection/CockPitSprite.gd" type="Script" id=2]
+[ext_resource path="res://Art/Tower/CockPitLight.png" type="Texture" id=3]
+[ext_resource path="res://Art/Laszlo/ControlLeversTop.png" type="Texture" id=4]
+[ext_resource path="res://Art/Laszlo/LaszloTopBody.png" type="Texture" id=5]
+[ext_resource path="res://Art/Laszlo/LaszloArmTop.png" type="Texture" id=6]
+[ext_resource path="res://Art/Laszlo/LaszloHandLeverTop.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Drive"
+length = 1.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Laszlo/LaszloTopBody:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 73.4349, 2.18877 ), Vector2( 51.1602, -4.75352 ), Vector2( 45.083, 23.1409 ), Vector2( 59.259, 12.6649 ), Vector2( 52.518, -9.88224 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Laszlo/LaszloTopBody:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -10.1957, 14.6655, 7.33277, -17.0647 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Laszlo/LeftArm:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -1.93274, -92.6564 ), Vector2( -31.6323, -86.9763 ), Vector2( -6.5638, -86.2015 ), Vector2( -4.24827, -89.4289 ), Vector2( -52.3804, -82.4291 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Laszlo/LeftArm:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -9.3016, -9.3016, -9.3016, -9.3016, -9.3016 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Laszlo/LeftArm2:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -4.98017, 102.101 ), Vector2( -6.65542, 104.38 ), Vector2( -46.1451, 102.116 ), Vector2( -25.5626, 102.109 ), Vector2( -0.752629, 106.662 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Laszlo/LeftArm2:rotation_degrees")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.7, 1.1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 18.0443, 18.0443, 18.0443, 18.0443, 18.0443 ]
+}
+
+[node name="CockPit" type="Sprite"]
+
+position = Vector2( 0, -0.128513 )
+scale = Vector2( 0.51, 0.5 )
+z_index = 1
+texture = ExtResource( 1 )
+script = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="CockPitLight" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LaszloAnimation" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Drive = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Laszlo" type="Node2D" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0.464078 )
+scale = Vector2( 0.5, 0.5 )
+z_index = 3
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="ControlLeversTop" type="Sprite" parent="Laszlo" index="0"]
+
+position = Vector2( -72.4165, 7.83657 )
+z_index = -1
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="LaszloTopBody" type="Sprite" parent="Laszlo" index="1"]
+
+position = Vector2( 50.8433, 18.8841 )
+rotation = 0.203958
+z_index = 1
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="LeftArm" type="Sprite" parent="Laszlo" index="2"]
+
+position = Vector2( -5.62291, -87.5129 )
+rotation = -0.162343
+z_index = -1
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="LaszloHandLeverTop" type="Sprite" parent="Laszlo/LeftArm" index="0"]
+
+position = Vector2( -33.1869, 10.9897 )
+texture = ExtResource( 7 )
+
+[node name="LeftArm2" type="Sprite" parent="Laszlo" index="3"]
+
+position = Vector2( -37.7816, 102.113 )
+rotation = 0.314932
+z_index = -1
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="LaszloHandLeverTop" type="Sprite" parent="Laszlo/LeftArm2" index="0"]
+
+position = Vector2( -35.6362, -9.6725 )
+texture = ExtResource( 7 )
+flip_v = true
+_sections_unfolded = [ "Offset", "Visibility" ]
+
+

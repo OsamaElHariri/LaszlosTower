@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/IdeaSFX.wav-fceb0e4486fa1e7e2bca765e17ae2ae1.sample"
+
+[deps]
+
+source_file="res://Audio/IdeaSFX.wav"
+source_md5="2326c448a622530313b23ef5d8772dbe"
+
+dest_files=[ "res://.import/IdeaSFX.wav-fceb0e4486fa1e7e2bca765e17ae2ae1.sample" ]
+dest_md5="95de469c7aea5c6bec9363d8984c06a9"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

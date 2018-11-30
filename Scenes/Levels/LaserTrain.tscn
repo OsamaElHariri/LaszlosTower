@@ -1,0 +1,101 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Scenes/Levels/LevelRootNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/UI/NewPowerUp.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/LevelTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/LevelChunks/TowerAndCamera.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LevelChunks/OppositeWalls.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/SectionSpawning/SpawnKiosk.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/SectionSpawning/WallDispenser.tscn" type="PackedScene" id=7]
+
+[node name="LaserTrain" index="0" instance=ExtResource( 1 )]
+
+description = "That looks dangerous"
+explosion = 0
+laser = 30
+pulse = 0
+shield = 0
+teleport = 0
+train = 20
+
+[node name="NewPowerUp" parent="PowerUpsPanel" index="9" instance=ExtResource( 2 )]
+
+section_type = 2
+
+[node name="LevelTransition" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( -1286.39, 8.60263 )
+
+[node name="LevelTransition2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 4005.79, -62.0724 )
+end_of_level = true
+
+[node name="Tower" parent="." index="4" instance=ExtResource( 4 )]
+
+position = Vector2( -567.708, 351.417 )
+
+[node name="Walls" type="Position2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="walls" parent="Walls" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( -56.6444, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls4" parent="Walls" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 1937.84, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls2" parent="Walls" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 941.106, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls3" parent="Walls" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 1937.84, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls5" parent="Walls" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 2928.25, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Spawners" type="Position2D" parent="." index="6"]
+
+[node name="SpawnKiosk" parent="Spawners" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( 1364.72, 323.603 )
+section_type = 2
+spawn_interval = 1.0
+
+[node name="SpawnKiosk2" parent="Spawners" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 2059.02, 456.776 )
+section_type = 2
+spawn_interval = 1.0
+
+[node name="WallDispenser" parent="Spawners" index="2" instance=ExtResource( 7 )]
+
+position = Vector2( 713.41, 483.073 )
+section_type = 0
+spawn_interval = 4.0
+
+[node name="WallDispenser3" parent="Spawners" index="3" instance=ExtResource( 7 )]
+
+position = Vector2( 3480.14, 478.868 )
+section_type = 0
+spawn_interval = 4.0
+
+[node name="WallDispenser2" parent="Spawners" index="4" instance=ExtResource( 7 )]
+
+position = Vector2( 2054.29, 112.433 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform", "Z Index" ]
+section_type = 0
+spawn_interval = 4.0
+
+

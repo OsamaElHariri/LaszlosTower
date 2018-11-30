@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Environment/Wall.tscn" type="PackedScene" id=1]
+
+[node name="walls" type="Position2D"]
+
+[node name="Wall" type="StaticBody2D" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 585.047, 2.7636 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision" ]
+
+[node name="Wall2" type="StaticBody2D" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 584.266, 592.694 )
+rotation = 3.14159
+input_pickable = false
+collision_layer = 1
+collision_mask = 0
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+_sections_unfolded = [ "Collision", "Transform" ]
+
+

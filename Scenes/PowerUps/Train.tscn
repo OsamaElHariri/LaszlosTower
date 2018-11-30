@@ -1,0 +1,46 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scripts/PowerUps/Train.gd" type="Script" id=1]
+[ext_resource path="res://Art/PowerUps/Train/TrainFeedBack.png" type="Texture" id=2]
+[ext_resource path="res://Art/PowerUps/Train/Tracks.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/Audio/SfxPlayer.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Audio/TrainSFX.ogg" type="AudioStream" id=5]
+
+[node name="Train" type="Position2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="PowerUpDuration" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 4.0
+one_shot = true
+autostart = false
+
+[node name="VisualFeedback" type="Sprite" parent="." index="1"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0.646392 )
+position = Vector2( -0.0103745, 0.00724387 )
+z_index = 30
+texture = ExtResource( 2 )
+offset = Vector2( -317.246, 0.516815 )
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="Tracks" type="Sprite" parent="." index="2"]
+
+scale = Vector2( 1, 0.7 )
+z_index = -10
+z_as_relative = false
+texture = ExtResource( 3 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 0, 64 )
+_sections_unfolded = [ "Region", "Transform", "Visibility", "Z Index" ]
+
+[node name="SfxPlayer" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( -0.894518, -0.30423 )
+stream = ExtResource( 5 )
+
+

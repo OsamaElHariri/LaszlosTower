@@ -1,0 +1,107 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scenes/Levels/LevelRootNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LevelChunks/TutorialTowerActions.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/SectionSpawning/SingleSpawner.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scripts/LevelTransition.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/LevelChunks/TowerAndCamera.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Environment/Wall.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Art/Environment/WallExtension.png" type="Texture" id=7]
+[ext_resource path="res://Art/Cutscene/WorkDeskWall.png" type="Texture" id=8]
+
+[node name="TutorialCollect" index="0" instance=ExtResource( 1 )]
+
+_sections_unfolded = [ "Transform" ]
+description = "My first tower section"
+laser = 0
+pulse = 0
+teleport = 0
+train = 1
+
+[node name="TutorialTowerActions" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( 470.094, 128.508 )
+
+[node name="Spawners" type="Position2D" parent="." index="2"]
+
+editor/display_folded = true
+
+[node name="SingleSpawnPoint" parent="Spawners" index="0" instance=ExtResource( 3 )]
+
+position = Vector2( 576.857, 265.555 )
+section_type = 0
+dir = Vector2( 0, -1 )
+
+[node name="LevelTransition" parent="." index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 991.759, -60 )
+_sections_unfolded = [ "Transform" ]
+end_of_level = true
+
+[node name="Tower" parent="." index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 473.789, 259.456 )
+
+[node name="Walls" type="Position2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="Wall5" parent="Walls" index="0" instance=ExtResource( 6 )]
+
+position = Vector2( -33.9303, 383.118 )
+rotation = -1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall" parent="Walls" index="1" instance=ExtResource( 6 )]
+
+position = Vector2( 498.744, -19.2283 )
+
+[node name="Wall3" parent="Walls" index="2" instance=ExtResource( 6 )]
+
+position = Vector2( 500.173, 591.538 )
+rotation = 3.14159
+
+[node name="WallExtension" type="Sprite" parent="." index="6"]
+
+position = Vector2( -630.059, 379.948 )
+scale = Vector2( 8.74015, 15.0698 )
+texture = ExtResource( 7 )
+
+[node name="ClickOnPowerUp" type="Position2D" parent="." index="7"]
+
+z_index = 1
+_sections_unfolded = [ "Z Index" ]
+
+[node name="ClickOnPowerUpText" type="Label" parent="ClickOnPowerUp" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 734.0
+margin_top = 36.0
+margin_right = 875.0
+margin_bottom = 84.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+text = "Click on the power up to
+add it to the tower
+"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="WorkDeskWall" type="Sprite" parent="ClickOnPowerUp/ClickOnPowerUpText" index="0"]
+
+modulate = Color( 0.789063, 0.774855, 0.425354, 1 )
+position = Vector2( 78.481, 16.6414 )
+scale = Vector2( 0.120415, 0.0363153 )
+z_index = -1
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+

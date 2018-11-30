@@ -1,0 +1,397 @@
+[gd_scene load_steps=23 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/WorkDeskCutscene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Cutscene/WorkDeskWall.png" type="Texture" id=2]
+[ext_resource path="res://Art/Cutscene/Floor.png" type="Texture" id=3]
+[ext_resource path="res://Art/Cutscene/NightSky.png" type="Texture" id=4]
+[ext_resource path="res://Art/Cutscene/MorningSky.png" type="Texture" id=5]
+[ext_resource path="res://Art/Cutscene/Window.png" type="Texture" id=6]
+[ext_resource path="res://Art/Cutscene/FlippedFailPoster.png" type="Texture" id=7]
+[ext_resource path="res://Art/Cutscene/Trashcan.png" type="Texture" id=8]
+[ext_resource path="res://Art/Cutscene/Table.png" type="Texture" id=9]
+[ext_resource path="res://Art/Cutscene/LaszloLegs.png" type="Texture" id=10]
+[ext_resource path="res://Art/Cutscene/ChairBottom.png" type="Texture" id=11]
+[ext_resource path="res://Art/Cutscene/LaszloHair.png" type="Texture" id=12]
+[ext_resource path="res://Art/Cutscene/LaszloBody.png" type="Texture" id=13]
+[ext_resource path="res://Art/Cutscene/ChairTop.png" type="Texture" id=14]
+[ext_resource path="res://Art/Cutscene/Ambience.png" type="Texture" id=15]
+[ext_resource path="res://Art/Cutscene/CrumpledPaper.png" type="Texture" id=16]
+[ext_resource path="res://Audio/TrashCanHitSFX.wav" type="AudioStream" id=17]
+[ext_resource path="res://Audio/BirdsChirpingSFX.wav" type="AudioStream" id=18]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Throw"
+length = 6.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.8, 4.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 439.073, 683.922 ), Vector2( 789.281, 711.723 ), Vector2( 789.281, 711.723 ), Vector2( 1015.58, 493.025 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Camera2D:zoom")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 4.5, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.2, 0.2 ), Vector2( 0.2, 0.2 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("CrumpledPaper:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 2.5, 2.8, 3, 3.2, 3.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 833.682, 560.179 ), Vector2( 732.441, 660.551 ), Vector2( 712.37, 748.553 ), Vector2( 724.721, 726.166 ), Vector2( 772.506, 876.438 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("CrumpledPaper:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = false
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.1, 3.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("TrashHit:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 3, 4.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "WakeUp"
+length = 1.6
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LaszloHair:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.9, 1.3, 1.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 929.737, 635.122 ), Vector2( 929.17, 639.095 ), Vector2( 928.035, 626.043 ), Vector2( 928.136, 622.724 ), Vector2( 930.304, 586.322 ), Vector2( 929.737, 589.726 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaszloHair:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.3, 0.6, 0.9, 1.1, 1.3, 1.5, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.95, 1.05 ), Vector2( 1.05, 0.9 ), Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.05, 0.95 ), Vector2( 1.05, 0.95 ), Vector2( 0.95, 1.05 ), Vector2( 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+
+length = 3.5
+loop = true
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LaszloBody:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1.03, 1.03 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LaszloBody:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 927.471, 711.337 ), Vector2( 927.471, 708 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LaszloHair:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 1.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.95, 1.09 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Ambience:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("MorningSky:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Birds:playing")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+
+[node name="WorkDeskCutscene" type="Position2D"]
+
+scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Timer" type="Timer" parent="." index="0"]
+
+process_mode = 1
+wait_time = 1.0
+one_shot = true
+autostart = false
+
+[node name="TrashcanPaperThrow" type="AnimationPlayer" parent="." index="1"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Throw = SubResource( 1 )
+blend_times = [  ]
+
+[node name="WakeUp" type="AnimationPlayer" parent="." index="2"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/WakeUp = SubResource( 2 )
+blend_times = [  ]
+
+[node name="LaszloBreathe" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Breathe = SubResource( 3 )
+blend_times = [  ]
+
+[node name="NighToMorning" type="AnimationPlayer" parent="." index="4"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Morning = SubResource( 4 )
+blend_times = [  ]
+
+[node name="WorkDeskWall" type="Sprite" parent="." index="5"]
+
+position = Vector2( 1310.31, 528.363 )
+scale = Vector2( 1.58646, 0.8578 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Camera2D" type="Camera2D" parent="." index="6"]
+
+position = Vector2( 439.073, 683.922 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 0.2, 0.2 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Editor", "Transform", "Z Index" ]
+
+[node name="Floor" type="Sprite" parent="." index="7"]
+
+position = Vector2( 1061.08, 1014.1 )
+scale = Vector2( 5.00814, 5.00814 )
+texture = ExtResource( 3 )
+
+[node name="NightSky" type="Sprite" parent="." index="8"]
+
+position = Vector2( 939.435, 345.412 )
+texture = ExtResource( 4 )
+
+[node name="MorningSky" type="Sprite" parent="." index="9"]
+
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 940.708, 340.901 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Window" type="Sprite" parent="." index="10"]
+
+position = Vector2( 944.681, 346.563 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="FlippedFailPoster" type="Sprite" parent="." index="11"]
+
+position = Vector2( 379.311, 394.235 )
+scale = Vector2( 0.334697, 0.334697 )
+texture = ExtResource( 7 )
+
+[node name="Trashcan" type="Sprite" parent="." index="12"]
+
+position = Vector2( 651.984, 847.773 )
+texture = ExtResource( 8 )
+
+[node name="Table" type="Sprite" parent="." index="13"]
+
+position = Vector2( 926.23, 937.507 )
+scale = Vector2( 0.845297, 0.845297 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LaszloLegs" type="Sprite" parent="." index="14"]
+
+position = Vector2( 925.889, 823.802 )
+texture = ExtResource( 10 )
+
+[node name="ChairBottom" type="Sprite" parent="." index="15"]
+
+position = Vector2( 927.436, 862.518 )
+texture = ExtResource( 11 )
+
+[node name="LaszloHair" type="Sprite" parent="." index="16"]
+
+position = Vector2( 929.737, 635.122 )
+texture = ExtResource( 12 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="LaszloBody" type="Sprite" parent="." index="17"]
+
+position = Vector2( 927.471, 711.337 )
+texture = ExtResource( 13 )
+_sections_unfolded = [ "Transform", "Z Index" ]
+
+[node name="ChairTop" type="Sprite" parent="." index="18"]
+
+position = Vector2( 928.275, 737.615 )
+texture = ExtResource( 14 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Ambience" type="Sprite" parent="." index="19"]
+
+position = Vector2( 933.668, 456.471 )
+texture = ExtResource( 15 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="CrumpledPaper" type="Sprite" parent="." index="20"]
+
+modulate = Color( 0.886719, 0.886719, 0.886719, 1 )
+position = Vector2( 833.682, 560.179 )
+texture = ExtResource( 16 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="TrashHit" type="AudioStreamPlayer" parent="." index="21"]
+
+stream = ExtResource( 17 )
+volume_db = -24.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Birds" type="AudioStreamPlayer" parent="." index="22"]
+
+stream = ExtResource( 18 )
+volume_db = -18.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

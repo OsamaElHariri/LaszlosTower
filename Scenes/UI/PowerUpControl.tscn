@@ -1,0 +1,188 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/UI/PowerUpControl.gd" type="Script" id=1]
+[ext_resource path="res://Art/UI/PowerUpPanelControl.png" type="Texture" id=2]
+[ext_resource path="res://Art/UI/InfoMiniCard.png" type="Texture" id=3]
+[ext_resource path="res://Font/Courier Prime Sans.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://Art/UI/LeverStick.png" type="Texture" id=5]
+[ext_resource path="res://Art/UI/BlueLeverBulb.png" type="Texture" id=6]
+[ext_resource path="res://Art/UI/RedLeverBulb.png" type="Texture" id=7]
+[ext_resource path="res://Art/UI/BlackScreen.png" type="Texture" id=8]
+[ext_resource path="res://Art/UI/PowerUpOutOfOrder.png" type="Texture" id=9]
+[ext_resource path="res://Art/UI/DiscardWarning.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=1]
+
+size = 40
+use_mipmaps = false
+use_filter = false
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Resource", "Settings" ]
+
+[sub_resource type="DynamicFont" id=2]
+
+size = 24
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+_sections_unfolded = [ "Font", "Settings" ]
+
+[node name="PowerUpControl" type="Position2D"]
+
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PowerUpPanelControl" type="Sprite" parent="." index="0"]
+
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ActivateShortcutInfo" type="Sprite" parent="PowerUpPanelControl" index="0"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( 98.0801, -31.4397 )
+scale = Vector2( 0.485972, 0.485972 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="PowerUpPanelControl/ActivateShortcutInfo" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = -16.0
+margin_right = 13.0
+margin_bottom = 25.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.316406, 0.313297, 0.117416, 1 )
+text = "1"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="DiscardShortcutInfo" type="Sprite" parent="PowerUpPanelControl" index="1"]
+
+editor/display_folded = true
+visible = false
+position = Vector2( -76.9398, 21.7106 )
+scale = Vector2( 0.642134, 0.596153 )
+texture = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="PowerUpPanelControl/DiscardShortcutInfo" index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -26.0
+margin_top = -12.0
+margin_right = 28.0
+margin_bottom = 19.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 2
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.313726, 0.309804, 0.113725, 1 )
+text = "Q/A"
+align = 1
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+_sections_unfolded = [ "custom_colors", "custom_fonts" ]
+
+[node name="BlueLever" type="Sprite" parent="PowerUpPanelControl" index="2"]
+
+editor/display_folded = true
+position = Vector2( 68.9726, -22.9108 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BlueLeverBulb" type="Sprite" parent="PowerUpPanelControl/BlueLever" index="0"]
+
+position = Vector2( 0, -28 )
+texture = ExtResource( 6 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RedLever" type="Sprite" parent="PowerUpPanelControl" index="3"]
+
+editor/display_folded = true
+position = Vector2( -50.9122, -24.9511 )
+texture = ExtResource( 5 )
+
+[node name="RedLeverBulb" type="Sprite" parent="PowerUpPanelControl/RedLever" index="0"]
+
+position = Vector2( 0, -28 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PowerUpSymbol" type="Sprite" parent="PowerUpPanelControl" index="4"]
+
+position = Vector2( 7.55475, 0.581135 )
+scale = Vector2( 0.3, 0.3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="BlackScreen" type="Sprite" parent="PowerUpPanelControl" index="5"]
+
+position = Vector2( 9.72801, -0.160673 )
+texture = ExtResource( 8 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="OutOfOrderSymbol" type="Sprite" parent="PowerUpPanelControl" index="6"]
+
+position = Vector2( 7.55475, 0.581135 )
+texture = ExtResource( 9 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="DiscardWarning" type="Sprite" parent="PowerUpPanelControl" index="7"]
+
+visible = false
+position = Vector2( 7.96697, 0.521351 )
+texture = ExtResource( 10 )
+
+[node name="ActivationControl" type="Control" parent="." index="1"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -28.0
+margin_top = -46.0
+margin_right = 91.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+[node name="DiscardControl" type="Control" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -93.0
+margin_top = -46.0
+margin_right = -31.0
+margin_bottom = 36.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+
+

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/LaserBlastSFX.wav-ea39ac09b79541e0f781b7f11675a18e.sample"
+
+[deps]
+
+source_file="res://Audio/LaserBlastSFX.wav"
+source_md5="607b6c59ad7a43ca5d14a7395f2b6cf7"
+
+dest_files=[ "res://.import/LaserBlastSFX.wav-ea39ac09b79541e0f781b7f11675a18e.sample" ]
+dest_md5="cd44972cb91a214a941e580b86ee16bc"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

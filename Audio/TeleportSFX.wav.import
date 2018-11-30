@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TeleportSFX.wav-4c0c8fd0de91a987c47e5a70994b63e1.sample"
+
+[deps]
+
+source_file="res://Audio/TeleportSFX.wav"
+source_md5="b190ce2ae2762df4a2df9e81f5d917a9"
+
+dest_files=[ "res://.import/TeleportSFX.wav-4c0c8fd0de91a987c47e5a70994b63e1.sample" ]
+dest_md5="43dd1e8246cf619d317d6ba9abdb7389"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

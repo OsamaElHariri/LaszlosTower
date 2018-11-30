@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DoorCloseSFX.wav-78fdb89c48fc96862c29dc734ffae3f6.sample"
+
+[deps]
+
+source_file="res://Audio/DoorCloseSFX.wav"
+source_md5="2bb8de70c970287f9ff6edcd218002de"
+
+dest_files=[ "res://.import/DoorCloseSFX.wav-78fdb89c48fc96862c29dc734ffae3f6.sample" ]
+dest_md5="95789fa92ac71df51ad6b5bcade0f0fb"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,159 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/HybridTowerPosterCutscene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Cutscene/WorkDeskWall.png" type="Texture" id=2]
+[ext_resource path="res://Art/Cutscene/HybridTowerPoster.png" type="Texture" id=3]
+[ext_resource path="res://Art/Cutscene/PaperWithShadow.png" type="Texture" id=4]
+[ext_resource path="res://Art/Cutscene/Table.png" type="Texture" id=5]
+[ext_resource path="res://Art/Cutscene/MorningSky.png" type="Texture" id=6]
+[ext_resource path="res://Art/Cutscene/Window.png" type="Texture" id=7]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "Unroll"
+length = 9.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("Camera2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.8, 1.2, 1.5, 1.9, 2.3, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 625.133, 865.215 ), Vector2( 625.133, 865.215 ), Vector2( 625.133, 722.718 ), Vector2( 625.133, 722.718 ), Vector2( 626.984, 465.482 ), Vector2( 626.984, 465.482 ), Vector2( 623.282, 347.043 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Poster/PaperWithShadow:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.2, 1.5, 1.9, 2.3, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 586.059, 286.108 ), Vector2( 586.059, 256.571 ), Vector2( 586.059, 256.571 ), Vector2( 556.449, 132.579 ), Vector2( 556.449, 132.579 ), Vector2( 639.727, -104.299 ), Vector2( 639.727, -104.299 ), Vector2( 584.359, -655.701 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Poster/PaperWithShadow:rotation_degrees")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 0.8, 1.2, 1.5, 1.9, 2.3, 3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.0, 0.0, -6.12245, -6.12245, 11.6834, 11.6834, 0.0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("WorkDeskWall2:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 7.5, 9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ) ]
+}
+
+[node name="HybridTowerPosterCutscene" type="Position2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="Unroll" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/Unroll = SubResource( 1 )
+blend_times = [  ]
+
+[node name="WorkDeskWall" type="Sprite" parent="." index="1"]
+
+position = Vector2( 648.948, 398.214 )
+texture = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="." index="2"]
+
+position = Vector2( 625.133, 865.215 )
+anchor_mode = 1
+rotating = false
+current = true
+zoom = Vector2( 1, 1 )
+limit_left = -10000000
+limit_top = -10000000
+limit_right = 10000000
+limit_bottom = 10000000
+limit_smoothed = false
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = false
+smoothing_speed = 5.0
+offset_v = 0.0
+offset_h = 0.0
+drag_margin_left = 0.2
+drag_margin_top = 0.2
+drag_margin_right = 0.2
+drag_margin_bottom = 0.2
+editor_draw_screen = true
+editor_draw_limits = false
+editor_draw_drag_margin = false
+_sections_unfolded = [ "Transform" ]
+
+[node name="Poster" type="Position2D" parent="." index="3"]
+
+position = Vector2( 17.4761, 59.8551 )
+
+[node name="HybridTowerPoster" type="Sprite" parent="Poster" index="0"]
+
+position = Vector2( 584.982, 343.102 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="PaperWithShadow" type="Sprite" parent="Poster" index="1"]
+
+position = Vector2( 586.059, 286.108 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Table" type="Sprite" parent="." index="4"]
+
+position = Vector2( -179.971, 1498.55 )
+scale = Vector2( 1.76046, 1.76046 )
+texture = ExtResource( 5 )
+
+[node name="MorningSky" type="Sprite" parent="." index="5"]
+
+position = Vector2( -199.352, 344.683 )
+scale = Vector2( 1.76046, 1.76046 )
+texture = ExtResource( 6 )
+
+[node name="Window" type="Sprite" parent="." index="6"]
+
+position = Vector2( -176.433, 349.895 )
+scale = Vector2( 1.70178, 1.70178 )
+texture = ExtResource( 7 )
+
+[node name="WorkDeskWall2" type="Sprite" parent="." index="7"]
+
+modulate = Color( 0, 0, 0, 0 )
+position = Vector2( 610.679, 353.033 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+

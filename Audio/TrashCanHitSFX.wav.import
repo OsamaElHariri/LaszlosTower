@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/TrashCanHitSFX.wav-6cb1053c6a8a5085de8d66296a69611f.sample"
+
+[deps]
+
+source_file="res://Audio/TrashCanHitSFX.wav"
+source_md5="06bbfb446883894b7ae827d0b62bd1b0"
+
+dest_files=[ "res://.import/TrashCanHitSFX.wav-6cb1053c6a8a5085de8d66296a69611f.sample" ]
+dest_md5="15e4fee56d70c1d0118b17a6acaf38f5"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

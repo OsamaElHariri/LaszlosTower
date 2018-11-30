@@ -1,0 +1,176 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/EndCutscene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Cutscene/WorkDeskWall.png" type="Texture" id=2]
+[ext_resource path="res://Art/Cutscene/ToolBox.png" type="Texture" id=3]
+[ext_resource path="res://Art/Cutscene/Tool.png" type="Texture" id=4]
+[ext_resource path="res://Art/Cutscene/ToolBoxFront.png" type="Texture" id=5]
+[ext_resource path="res://Art/Cutscene/Door.png" type="Texture" id=6]
+[ext_resource path="res://Art/Cutscene/ThanksText.png" type="Texture" id=7]
+[ext_resource path="res://Art/Cutscene/BackToMenuText.png" type="Texture" id=8]
+[ext_resource path="res://Audio/ToolBoxSFX.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/HouseDoorCloseSFX.wav" type="AudioStream" id=10]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "EndScene"
+length = 5.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("BlackScreen:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1, 3, 3.5, 4.7, 5.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 0 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 1 ), Color( 0, 0, 0, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("ToolBox/Tool:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1.5, 2.5 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 572.883, -80.7256 ), Vector2( 572.883, -80.7256 ), Vector2( 557.778, 430.333 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Door:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("ToolBoxSFX:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 2.5, 3.26603 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("DoorClose:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 4.2, 5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="EndCutscene" type="Position2D"]
+
+script = ExtResource( 1 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/EndScene = SubResource( 1 )
+blend_times = [  ]
+
+[node name="ToolBox" type="Position2D" parent="." index="1"]
+
+[node name="WorkDeskWall" type="Sprite" parent="ToolBox" index="0"]
+
+position = Vector2( 503.049, 109.166 )
+texture = ExtResource( 2 )
+
+[node name="WorkDeskWall2" type="Sprite" parent="ToolBox" index="1"]
+
+modulate = Color( 0.59375, 0.59375, 0.59375, 1 )
+position = Vector2( 509.865, 803.536 )
+scale = Vector2( 1, 0.283382 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+
+[node name="ToolBox" type="Sprite" parent="ToolBox" index="2"]
+
+position = Vector2( 601.108, 371.015 )
+texture = ExtResource( 3 )
+
+[node name="Tool" type="Sprite" parent="ToolBox" index="3"]
+
+position = Vector2( 572.883, -80.7256 )
+rotation = 0.632909
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="ToolBoxFront" type="Sprite" parent="ToolBox" index="4"]
+
+position = Vector2( 599.878, 487.408 )
+texture = ExtResource( 5 )
+
+[node name="Door" type="Position2D" parent="." index="2"]
+
+visible = false
+_sections_unfolded = [ "Visibility" ]
+
+[node name="Door" type="Sprite" parent="Door" index="0"]
+
+position = Vector2( 621.441, 377.435 )
+scale = Vector2( 0.838018, 0.838018 )
+texture = ExtResource( 6 )
+
+[node name="ThanksText" type="Sprite" parent="Door" index="1"]
+
+position = Vector2( 265.719, 603.271 )
+scale = Vector2( 0.662949, 0.662949 )
+texture = ExtResource( 7 )
+
+[node name="BackToMenuText" type="Sprite" parent="Door" index="2"]
+
+position = Vector2( 1080.6, 653.91 )
+scale = Vector2( 0.43674, 0.43674 )
+texture = ExtResource( 8 )
+
+[node name="BlackScreen" type="Sprite" parent="." index="3"]
+
+modulate = Color( 0, 0, 0, 1 )
+position = Vector2( 559.239, 228.797 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Visibility" ]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ToolBoxSFX" type="AudioStreamPlayer" parent="." index="4"]
+
+stream = ExtResource( 9 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="DoorClose" type="AudioStreamPlayer" parent="." index="5"]
+
+stream = ExtResource( 10 )
+volume_db = 0.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

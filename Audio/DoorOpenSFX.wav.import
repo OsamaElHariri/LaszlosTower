@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/DoorOpenSFX.wav-3ff961c554c31c40282868ddaacb5dc6.sample"
+
+[deps]
+
+source_file="res://Audio/DoorOpenSFX.wav"
+source_md5="31ba303dd1ec0d48c6284c5748869498"
+
+dest_files=[ "res://.import/DoorOpenSFX.wav-3ff961c554c31c40282868ddaacb5dc6.sample" ]
+dest_md5="fcb545f8c1fa532e513f82f8bfc8f89c"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

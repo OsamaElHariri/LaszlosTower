@@ -1,0 +1,18 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/LaszlosTowerBackgroundMusic.ogg-e4926f200b028b9056e71cf957b1f88f.oggstr"
+
+[deps]
+
+source_file="res://Audio/LaszlosTowerBackgroundMusic.ogg"
+source_md5="7591d309acabecb2ae763282cd91d4b4"
+
+dest_files=[ "res://.import/LaszlosTowerBackgroundMusic.ogg-e4926f200b028b9056e71cf957b1f88f.oggstr" ]
+dest_md5="bc2bd07f1456e8a25f6ca93d727b9895"
+
+[params]
+
+loop=true
+loop_offset=0

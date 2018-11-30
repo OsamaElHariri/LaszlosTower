@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Audio/PulseSFX.wav" type="AudioStream" id=1]
+[ext_resource path="res://Scripts/Audio/SfxPlayer.gd" type="Script" id=2]
+
+[node name="SfxPlayer" type="AudioStreamPlayer2D"]
+
+stream = ExtResource( 1 )
+volume_db = 0.0
+autoplay = false
+max_distance = 700.0
+attenuation = 3.13833
+bus = "Master"
+area_mask = 1
+script = ExtResource( 2 )
+volume = 0
+
+

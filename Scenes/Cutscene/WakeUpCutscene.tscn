@@ -1,0 +1,271 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/WakeUpCutscene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Cutscene/WorkDeskWall.png" type="Texture" id=2]
+[ext_resource path="res://Art/Cutscene/LaszloThinking.png" type="Texture" id=3]
+[ext_resource path="res://Art/Cutscene/EmptyPaper.png" type="Texture" id=4]
+[ext_resource path="res://Art/Cutscene/LightBulb.png" type="Texture" id=5]
+[ext_resource path="res://Art/Cutscene/LaszloHappyFace.png" type="Texture" id=6]
+[ext_resource path="res://Art/Cutscene/LaszloHappyHair.png" type="Texture" id=7]
+[ext_resource path="res://Art/Cutscene/LaszloGoggles.png" type="Texture" id=8]
+[ext_resource path="res://Audio/PaperFalling.wav" type="AudioStream" id=9]
+[ext_resource path="res://Audio/IdeaSFX.wav" type="AudioStream" id=10]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "BecomeHappy"
+length = 0.5
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("LaszloThinking:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.8 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("HappyLaszlo:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 0.8 ), Vector2( 1, 1.05 ), Vector2( 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("HappyLaszlo/LaszloHappyHair:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 0.9, 1.1 ), Vector2( 1.1, 0.95 ), Vector2( 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("HappyLaszlo/LaszloHappyHair:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.1, 0.2, 0.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -6.42584, -314.262 ), Vector2( -4.95563, -327.564 ), Vector2( -6.42584, -314.262 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("HappyLaszlo:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ false, true ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LaszloThinking:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Idea:playing")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0.1, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="Animation" id=2]
+
+resource_name = "PaperFalling"
+length = 1.0
+loop = false
+step = 0.1
+tracks/0/type = "value"
+tracks/0/path = NodePath("EmptyPaper2:position")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 262.543, 595.54 ), Vector2( 449.453, 752.303 ), Vector2( 449.453, 752.303 ), Vector2( 324.19, 1011.18 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("EmptyPaper2:rotation_degrees")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ -39.6481, 16.9836, 16.9836, -14.5019 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("EmptyPaper:position")
+tracks/2/interp = 2
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 230.849, 599.621 ), Vector2( -20.8193, 728.857 ), Vector2( -20.8193, 728.857 ), Vector2( 172.353, 984.607 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("EmptyPaper:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.5, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 14.3669, 46.4496, 46.4496, 12.5356 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("PaperFall:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.9 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="WakeUpCutscene" type="Position2D"]
+
+position = Vector2( 340.583, -117.732 )
+script = ExtResource( 1 )
+
+[node name="Eureka" type="AnimationPlayer" parent="." index="0"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/BecomeHappy = SubResource( 1 )
+anims/PaperFalling = SubResource( 2 )
+blend_times = [  ]
+
+[node name="WorkDeskWall" type="Sprite" parent="." index="1"]
+
+position = Vector2( 305.895, 476.992 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="LaszloThinking" type="Sprite" parent="." index="2"]
+
+position = Vector2( 255.087, 809.18 )
+texture = ExtResource( 3 )
+offset = Vector2( 4.15594, -198.463 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="EmptyPaper" type="Sprite" parent="." index="3"]
+
+position = Vector2( 230.849, 599.621 )
+rotation = 0.25075
+scale = Vector2( 0.643133, 0.643133 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="EmptyPaper2" type="Sprite" parent="." index="4"]
+
+position = Vector2( 262.543, 595.54 )
+rotation = -0.69199
+scale = Vector2( 0.643133, 0.643133 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="HappyLaszlo" type="Position2D" parent="." index="5"]
+
+visible = false
+position = Vector2( 253.765, 811.891 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="LightBulb" type="Sprite" parent="HappyLaszlo" index="0"]
+
+position = Vector2( 22.5432, -581.707 )
+texture = ExtResource( 5 )
+
+[node name="LaszloHappyFace" type="Sprite" parent="HappyLaszlo" index="1"]
+
+position = Vector2( -0.632446, -127.988 )
+texture = ExtResource( 6 )
+offset = Vector2( -1.98846, -6.59229 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LaszloHappyHair" type="Sprite" parent="HappyLaszlo" index="2"]
+
+position = Vector2( -6.42584, -314.262 )
+texture = ExtResource( 7 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="LaszloGoggles" type="Sprite" parent="HappyLaszlo" index="3"]
+
+position = Vector2( -0.425903, -193.725 )
+texture = ExtResource( 8 )
+
+[node name="Timer" type="Timer" parent="." index="6"]
+
+process_mode = 1
+wait_time = 1.2
+one_shot = true
+autostart = false
+
+[node name="PaperFall" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 9 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="Idea" type="AudioStreamPlayer" parent="." index="8"]
+
+stream = ExtResource( 10 )
+volume_db = -10.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

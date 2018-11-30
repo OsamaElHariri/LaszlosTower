@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GrabSFX.wav-f3a61044795e2e03685e0d601e791d8c.sample"
+
+[deps]
+
+source_file="res://Audio/GrabSFX.wav"
+source_md5="6c2d94b2f8eb3d62b129554ba23c5537"
+
+dest_files=[ "res://.import/GrabSFX.wav-f3a61044795e2e03685e0d601e791d8c.sample" ]
+dest_md5="4fa7288f20298ce3f689a1dd79bd8956"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

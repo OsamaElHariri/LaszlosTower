@@ -1,0 +1,251 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://Scripts/Cutscene/DoorOpenCutscene.gd" type="Script" id=1]
+[ext_resource path="res://Art/Cutscene/DarkWall.png" type="Texture" id=2]
+[ext_resource path="res://Art/Cutscene/OpenDoorLight.png" type="Texture" id=3]
+[ext_resource path="res://Art/Cutscene/LaszloBodyShadow.png" type="Texture" id=4]
+[ext_resource path="res://Art/Cutscene/LaszloHeadShadow.png" type="Texture" id=5]
+[ext_resource path="res://Art/Cutscene/UlimatePoster.png" type="Texture" id=6]
+[ext_resource path="res://Scenes/Cutscene/LightSwing.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Audio/DoorOpenSFX.wav" type="AudioStream" id=8]
+[ext_resource path="res://Audio/DoorCloseSFX.wav" type="AudioStream" id=9]
+
+[sub_resource type="Animation" id=1]
+
+resource_name = "OpenCloseDoor"
+length = 4.0
+loop = false
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("OpenDoorLight/LeftDoor:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1.3, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -250, 0 ), Vector2( -400, 0 ), Vector2( -400, 0 ), Vector2( -250, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("OpenDoorLight/RightDoor:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1.3, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 200, 0 ), Vector2( 400, 0 ), Vector2( 400, 0 ), Vector2( 200, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("OpenDoorLight/LaszloShadow/LaszloHeadShadow:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("OpenDoorLight/LaszloShadow:z_index")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 0, 1 ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("OpenDoorLight/LaszloShadow:rotation_degrees")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 1.3, 1.3, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 22.5753, 10.4617, 0.0 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("OpenDoorLight/LaszloShadow:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0.3, 0.55, 0.7, 0.85, 1.3, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -11.4475, 108.824 ), Vector2( -11.4475, 108.824 ), Vector2( 17.3885, 114.875 ), Vector2( -11.4475, 108.824 ), Vector2( -11.4475, 108.824 ), Vector2( -129.717, 108.824 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("UlimatePoster:rotation_degrees")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 2.9, 3.2, 3.5, 3.8, 4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 55.5208, 14.5069, 49.3969, 41.0963 ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("OpenDoorLight/LaszloShadow:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 1.3, 1.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.414353 ) ]
+}
+tracks/8/type = "value"
+tracks/8/path = NodePath("OpenDoorLight/LaszloShadow:scale")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/keys = {
+"times": PoolRealArray( 0.3, 0.55, 0.85 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 1, 1 ), Vector2( 1, 1 ), Vector2( 1.1, 1.1 ) ]
+}
+tracks/9/type = "value"
+tracks/9/path = NodePath("DoorOpen:playing")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/10/type = "value"
+tracks/10/path = NodePath("DoorClose:playing")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/keys = {
+"times": PoolRealArray( 1.3, 1.7 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[node name="DoorOpenCutscene" type="Position2D" index="0"]
+
+script = ExtResource( 1 )
+
+[node name="DarkWall" type="Sprite" parent="." index="0"]
+
+position = Vector2( 518.349, 371.704 )
+scale = Vector2( 5.9387, 5.88471 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="OpenDoorLight" type="Sprite" parent="." index="1"]
+
+editor/display_folded = true
+position = Vector2( 505.214, 346.114 )
+scale = Vector2( 1.74537, 3.52629 )
+texture = ExtResource( 3 )
+
+[node name="LaszloShadow" type="Position2D" parent="OpenDoorLight" index="0"]
+
+position = Vector2( -11.4475, 108.824 )
+rotation = 0.181014
+_sections_unfolded = [ "Transform", "Visibility", "Z Index" ]
+
+[node name="LaszloBodyShadow" type="Sprite" parent="OpenDoorLight/LaszloShadow" index="0"]
+
+position = Vector2( 5.02138, -33.3248 )
+scale = Vector2( 0.572944, 0.283584 )
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="LaszloHeadShadow" type="Sprite" parent="OpenDoorLight/LaszloShadow" index="1"]
+
+position = Vector2( 19.1269, -102.806 )
+scale = Vector2( 0.572944, 0.283584 )
+texture = ExtResource( 5 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+[node name="LeftDoor" type="Sprite" parent="OpenDoorLight" index="1"]
+
+position = Vector2( -250, 0 )
+scale = Vector2( 1.11048, 1.11048 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="RightDoor" type="Sprite" parent="OpenDoorLight" index="2"]
+
+position = Vector2( 200, 0 )
+scale = Vector2( 1.11048, 1.11048 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="UlimatePoster" type="Sprite" parent="." index="2"]
+
+modulate = Color( 1, 1, 1, 0.812157 )
+position = Vector2( 874.842, 96.9218 )
+rotation = 0.00532376
+texture = ExtResource( 6 )
+offset = Vector2( 149.134, 186.731 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Door" type="AnimationPlayer" parent="." index="3"]
+
+root_node = NodePath("..")
+autoplay = ""
+playback_process_mode = 1
+playback_default_blend_time = 0.0
+playback_speed = 1.0
+anims/OpenCloseDoor = SubResource( 1 )
+blend_times = [  ]
+_sections_unfolded = [ "Playback Options" ]
+
+[node name="Timer" type="Timer" parent="." index="4"]
+
+process_mode = 1
+wait_time = 2.0
+one_shot = true
+autostart = false
+
+[node name="LabLight" parent="." index="5" instance=ExtResource( 7 )]
+
+[node name="DoorOpen" type="AudioStreamPlayer" parent="." index="6"]
+
+stream = ExtResource( 8 )
+volume_db = -4.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+[node name="DoorClose" type="AudioStreamPlayer" parent="." index="7"]
+
+stream = ExtResource( 9 )
+volume_db = -4.0
+autoplay = false
+mix_target = 0
+bus = "Master"
+
+

@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Scenes/TowerSection/Tower.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/Camera/CameraNode.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/TowerSection/TowerSection.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/Environment/Wall.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/UI/PowerUpsPanel.tscn" type="PackedScene" id=5]
+
+[node name="EngineTest" type="Position2D"]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="Tower" parent="." index="0" instance=ExtResource( 1 )]
+
+editor/display_folded = true
+position = Vector2( 1512.66, 294.343 )
+
+[node name="CameraNode" parent="Tower" index="6" instance=ExtResource( 2 )]
+
+_sections_unfolded = [ "Transform" ]
+
+[node name="TowerSection" parent="." index="1" instance=ExtResource( 3 )]
+
+position = Vector2( 869.581, 205.185 )
+
+[node name="TowerSection15" parent="." index="2" instance=ExtResource( 3 )]
+
+position = Vector2( 662.475, 219.539 )
+
+[node name="TowerSection2" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( 810.854, 517.363 )
+
+[node name="TowerSection17" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 672.303, 564.526 )
+
+[node name="TowerSection5" parent="." index="5" instance=ExtResource( 3 )]
+
+position = Vector2( 1067.4, 538.999 )
+
+[node name="TowerSection6" parent="." index="6" instance=ExtResource( 3 )]
+
+position = Vector2( 1203.39, 304.093 )
+
+[node name="TowerSection3" parent="." index="7" instance=ExtResource( 3 )]
+
+position = Vector2( 1330.12, 492.636 )
+
+[node name="TowerSection4" parent="." index="8" instance=ExtResource( 3 )]
+
+position = Vector2( 1432.12, 239.184 )
+
+[node name="TowerSection7" parent="." index="9" instance=ExtResource( 3 )]
+
+position = Vector2( 1736.74, 473.315 )
+
+[node name="TowerSection11" parent="." index="10" instance=ExtResource( 3 )]
+
+position = Vector2( 1953.25, 211.492 )
+
+[node name="TowerSection14" parent="." index="11" instance=ExtResource( 3 )]
+
+position = Vector2( 1932.74, 439.103 )
+
+[node name="TowerSection12" parent="." index="12" instance=ExtResource( 3 )]
+
+position = Vector2( 284.124, 523.666 )
+
+[node name="TowerSection13" parent="." index="13" instance=ExtResource( 3 )]
+
+position = Vector2( 296.712, 214.009 )
+
+[node name="TowerSection8" parent="." index="14" instance=ExtResource( 3 )]
+
+position = Vector2( 1636.04, 188.834 )
+
+[node name="TowerSection9" parent="." index="15" instance=ExtResource( 3 )]
+
+position = Vector2( 452.799, 206.456 )
+
+[node name="TowerSection10" parent="." index="16" instance=ExtResource( 3 )]
+
+position = Vector2( 563.57, 460.727 )
+
+[node name="TowerSection16" parent="." index="17" instance=ExtResource( 3 )]
+
+position = Vector2( 801.434, 347.947 )
+
+[node name="StaticBody2D" parent="." index="18" instance=ExtResource( 4 )]
+
+position = Vector2( 594.13, 4.34711 )
+
+[node name="StaticBody2D5" parent="." index="19" instance=ExtResource( 4 )]
+
+position = Vector2( 2136.87, 298.247 )
+rotation = 1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="StaticBody2D6" parent="." index="20" instance=ExtResource( 4 )]
+
+position = Vector2( 48.2987, 348.55 )
+rotation = -1.5708
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="StaticBody2D4" parent="." index="21" instance=ExtResource( 4 )]
+
+position = Vector2( 596.11, 690.982 )
+rotation = 3.14159
+
+[node name="StaticBody2D2" parent="." index="22" instance=ExtResource( 4 )]
+
+position = Vector2( 1594, 4.24046 )
+
+[node name="StaticBody2D3" parent="." index="23" instance=ExtResource( 4 )]
+
+position = Vector2( 1595.98, 690.875 )
+rotation = 3.14159
+
+[node name="PowerUpsPanel" parent="." index="24" instance=ExtResource( 5 )]
+
+

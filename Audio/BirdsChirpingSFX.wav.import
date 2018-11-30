@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/BirdsChirpingSFX.wav-2202ac75b603f89df6054e1ee59c1ab9.sample"
+
+[deps]
+
+source_file="res://Audio/BirdsChirpingSFX.wav"
+source_md5="cbccd46616ddab7271f86cca72e30d78"
+
+dest_files=[ "res://.import/BirdsChirpingSFX.wav-2202ac75b603f89df6054e1ee59c1ab9.sample" ]
+dest_md5="4bc94f2cd430a0ac2b55371323f541a6"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

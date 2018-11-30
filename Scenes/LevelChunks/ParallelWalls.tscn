@@ -1,0 +1,79 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Environment/Wall.tscn" type="PackedScene" id=1]
+
+[node name="Walls" type="Position2D" index="0"]
+
+editor/display_folded = true
+
+[node name="Wall" parent="." index="0" instance=ExtResource( 1 )]
+
+position = Vector2( 581.493, 2.67966 )
+
+[node name="Wall5" parent="." index="1" instance=ExtResource( 1 )]
+
+position = Vector2( 2580.14, 2.38987 )
+
+[node name="Wall10" parent="." index="2" instance=ExtResource( 1 )]
+
+position = Vector2( 4579.17, 2.28666 )
+
+[node name="Wall4" parent="." index="3" instance=ExtResource( 1 )]
+
+position = Vector2( 1580.65, 2.55618 )
+
+[node name="Wall6" parent="." index="4" instance=ExtResource( 1 )]
+
+position = Vector2( 3579.3, 2.26638 )
+
+[node name="Wall13" parent="." index="5" instance=ExtResource( 1 )]
+
+position = Vector2( 5578.33, 2.16317 )
+
+[node name="Wall15" parent="." index="6" instance=ExtResource( 1 )]
+
+position = Vector2( 6577.93, 1.96879 )
+
+[node name="Wall3" parent="." index="7" instance=ExtResource( 1 )]
+
+position = Vector2( 581.52, 593.808 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall8" parent="." index="8" instance=ExtResource( 1 )]
+
+position = Vector2( 2581.17, 594 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall11" parent="." index="9" instance=ExtResource( 1 )]
+
+position = Vector2( 4580.2, 593.897 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall7" parent="." index="10" instance=ExtResource( 1 )]
+
+position = Vector2( 1581.51, 593.939 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall9" parent="." index="11" instance=ExtResource( 1 )]
+
+position = Vector2( 3581.16, 594.131 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall12" parent="." index="12" instance=ExtResource( 1 )]
+
+position = Vector2( 5580.19, 594.028 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+[node name="Wall14" parent="." index="13" instance=ExtResource( 1 )]
+
+position = Vector2( 6579.79, 593.833 )
+rotation = 3.14159
+_sections_unfolded = [ "Collision", "Transform" ]
+
+

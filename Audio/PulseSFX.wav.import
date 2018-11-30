@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PulseSFX.wav-e037be69aa0bdf2038072dce2b270422.sample"
+
+[deps]
+
+source_file="res://Audio/PulseSFX.wav"
+source_md5="2762bdf0e0d5ef3f8e4517ea146a4647"
+
+dest_files=[ "res://.import/PulseSFX.wav-e037be69aa0bdf2038072dce2b270422.sample" ]
+dest_md5="05be2f4be72e257a08d78bead0d7de1d"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

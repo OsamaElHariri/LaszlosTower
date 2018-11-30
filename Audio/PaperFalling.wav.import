@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/PaperFalling.wav-8e6b42cd2e1ea604152b49719dbc75cd.sample"
+
+[deps]
+
+source_file="res://Audio/PaperFalling.wav"
+source_md5="b5569ed7bc0fdd0d0d97ea1d88996b10"
+
+dest_files=[ "res://.import/PaperFalling.wav-8e6b42cd2e1ea604152b49719dbc75cd.sample" ]
+dest_md5="87178e476e8b5d46e38a64937236374e"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

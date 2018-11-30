@@ -1,0 +1,117 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scripts/PowerUps/Shield.gd" type="Script" id=1]
+[ext_resource path="res://Art/PowerUps/Shield/VisualAid.png" type="Texture" id=2]
+[ext_resource path="res://Art/PowerUps/Shield/Bubble.png" type="Texture" id=3]
+[ext_resource path="res://Art/PowerUps/Shield/HoveringRing.png" type="Texture" id=4]
+
+[sub_resource type="Gradient" id=1]
+
+offsets = PoolRealArray( 0, 0.159763, 0.798817, 1 )
+colors = PoolColorArray( 1, 1, 1, 0, 1, 1, 1, 0.872156, 0.589844, 0.589844, 0.589844, 0.952663, 0.261719, 0.261719, 0.261719, 0 )
+
+[sub_resource type="GradientTexture" id=2]
+
+flags = 4
+gradient = SubResource( 1 )
+width = 2048
+
+[sub_resource type="Curve" id=3]
+
+min_value = 0.0
+max_value = 1.0
+bake_resolution = 100
+_data = [ Vector2( 0, 0 ), 0.0, 2.32513, 0, 0, Vector2( 1, 0.908203 ), -1.23928, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=4]
+
+flags = 4
+width = 2048
+curve = SubResource( 3 )
+
+[sub_resource type="ParticlesMaterial" id=5]
+
+render_priority = 0
+trail_divisor = 1
+emission_shape = 0
+flag_align_y = false
+flag_rotate_y = false
+flag_disable_z = true
+spread = 45.0
+flatness = 0.0
+gravity = Vector3( 0, 0, 0 )
+initial_velocity = 1.0
+initial_velocity_random = 0.0
+angular_velocity = 0.0
+angular_velocity_random = 0.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+linear_accel = 0.0
+linear_accel_random = 0.0
+radial_accel = 0.0
+radial_accel_random = 0.0
+tangential_accel = 0.0
+tangential_accel_random = 0.0
+damping = 0.0
+damping_random = 0.0
+angle = 0.0
+angle_random = 0.0
+scale = 1.0
+scale_random = 0.0
+scale_curve = SubResource( 4 )
+color_ramp = SubResource( 2 )
+hue_variation = 0.0
+hue_variation_random = 0.0
+anim_speed = 0.0
+anim_speed_random = 0.0
+anim_offset = 0.0
+anim_offset_random = 0.0
+anim_loop = false
+_sections_unfolded = [ "Color", "Scale" ]
+
+[node name="Shield" type="Position2D"]
+
+z_index = 51
+script = ExtResource( 1 )
+_sections_unfolded = [ "Z Index" ]
+
+[node name="VisualFeedback" type="Sprite" parent="." index="0"]
+
+visible = false
+modulate = Color( 1, 1, 1, 0.348078 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="ActiveVisuals" type="Position2D" parent="." index="1"]
+
+visible = false
+
+[node name="Bubble" type="Sprite" parent="ActiveVisuals" index="0"]
+
+modulate = Color( 1, 1, 1, 0.767961 )
+texture = ExtResource( 3 )
+_sections_unfolded = [ "Transform", "Visibility" ]
+
+[node name="Particles2D" type="Particles2D" parent="ActiveVisuals" index="1"]
+
+emitting = true
+amount = 3
+lifetime = 4.0
+one_shot = false
+preprocess = 0.0
+speed_scale = 1.0
+explosiveness = 0.0
+randomness = 0.0
+fixed_fps = 0
+fract_delta = true
+visibility_rect = Rect2( -100, -100, 200, 200 )
+local_coords = true
+draw_order = 0
+process_material = SubResource( 5 )
+texture = ExtResource( 4 )
+normal_map = null
+h_frames = 1
+v_frames = 1
+_sections_unfolded = [ "Process Material", "Textures", "Time" ]
+
+

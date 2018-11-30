@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/ToolBoxSFX.wav-1f92a3b7876c11293d97b4f086a5e5e7.sample"
+
+[deps]
+
+source_file="res://Audio/ToolBoxSFX.wav"
+source_md5="e19e2509ebe69a7ffa1c20df3aea45e7"
+
+dest_files=[ "res://.import/ToolBoxSFX.wav-1f92a3b7876c11293d97b4f086a5e5e7.sample" ]
+dest_md5="f6bf410bdaa59fa9bf231304d60f1769"
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0

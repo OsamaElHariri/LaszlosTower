@@ -1,0 +1,162 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Scenes/Levels/LevelRootNode.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/LevelChunks/TowerAndCamera.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scripts/LevelTransition.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/LevelChunks/OppositeWalls.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/SectionSpawning/WallDispenser.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/SectionSpawning/SpawnKiosk.tscn" type="PackedScene" id=6]
+
+[node name="ShieldLaserTrain" instance=ExtResource( 1 )]
+
+description = "With shield and steed, I make it through"
+laser = 20
+pulse = 0
+shield = 10
+teleport = 0
+train = 15
+
+[node name="Tower" parent="." index="1" instance=ExtResource( 2 )]
+
+position = Vector2( -542.948, 413.718 )
+
+[node name="LevelTransition" parent="." index="3" instance=ExtResource( 3 )]
+
+position = Vector2( -1302.71, 78.7446 )
+
+[node name="LevelTransition2" parent="." index="4" instance=ExtResource( 3 )]
+
+position = Vector2( 3953.49, 23.1346 )
+end_of_level = true
+
+[node name="Walls" type="Position2D" parent="." index="5"]
+
+editor/display_folded = true
+
+[node name="walls" parent="Walls" index="0" instance=ExtResource( 4 )]
+
+position = Vector2( -72.8971, 0 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls2" parent="Walls" index="1" instance=ExtResource( 4 )]
+
+position = Vector2( 925.325, -0.0725727 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls3" parent="Walls" index="2" instance=ExtResource( 4 )]
+
+position = Vector2( 1909.95, 0.00490189 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="walls4" parent="Walls" index="3" instance=ExtResource( 4 )]
+
+position = Vector2( 2875.84, 0.267199 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Spawners" type="Position2D" parent="." index="6"]
+
+editor/display_folded = true
+
+[node name="WallDispenser" parent="Spawners" index="0" instance=ExtResource( 5 )]
+
+position = Vector2( 789.117, 490.808 )
+section_type = 0
+spawn_interval = 2.0
+
+[node name="WallDispenser3" parent="Spawners" index="1" instance=ExtResource( 5 )]
+
+position = Vector2( 2659.88, 496.019 )
+section_type = 0
+spawn_interval = 2.0
+
+[node name="WallDispenser5" parent="Spawners" index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 1836.83, 485.849 )
+section_type = 0
+spawn_interval = 2.0
+
+[node name="WallDispenser2" parent="Spawners" index="3" instance=ExtResource( 5 )]
+
+position = Vector2( 789.514, 108.976 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform", "Z Index" ]
+section_type = 0
+spawn_interval = 2.0
+
+[node name="WallDispenser4" parent="Spawners" index="4" instance=ExtResource( 5 )]
+
+position = Vector2( 2660.28, 114.188 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform", "Z Index" ]
+section_type = 0
+spawn_interval = 2.0
+
+[node name="WallDispenser6" parent="Spawners" index="5" instance=ExtResource( 5 )]
+
+position = Vector2( 1837.23, 104.017 )
+rotation = 3.14159
+_sections_unfolded = [ "Transform", "Z Index" ]
+section_type = 0
+spawn_interval = 2.0
+
+[node name="SpawnKiosk" parent="Spawners" index="6" instance=ExtResource( 6 )]
+
+position = Vector2( 453.919, 196.814 )
+section_type = 4
+spawn_interval = 2.0
+
+[node name="SpawnKiosk6" parent="Spawners" index="7" instance=ExtResource( 6 )]
+
+position = Vector2( 2324.69, 202.025 )
+section_type = 4
+spawn_interval = 2.0
+
+[node name="SpawnKiosk3" parent="Spawners" index="8" instance=ExtResource( 6 )]
+
+position = Vector2( 1365.41, 190.315 )
+section_type = 2
+spawn_interval = 2.0
+
+[node name="SpawnKiosk7" parent="Spawners" index="9" instance=ExtResource( 6 )]
+
+position = Vector2( 3236.17, 195.527 )
+section_type = 2
+spawn_interval = 2.0
+
+[node name="SpawnKiosk2" parent="Spawners" index="10" instance=ExtResource( 6 )]
+
+position = Vector2( 452.559, 452.565 )
+section_type = 4
+spawn_interval = 2.0
+
+[node name="SpawnKiosk8" parent="Spawners" index="11" instance=ExtResource( 6 )]
+
+position = Vector2( 2323.32, 457.776 )
+section_type = 4
+spawn_interval = 2.0
+
+[node name="SpawnKiosk4" parent="Spawners" index="12" instance=ExtResource( 6 )]
+
+position = Vector2( 1364.78, 457.828 )
+section_type = 2
+spawn_interval = 2.0
+
+[node name="SpawnKiosk9" parent="Spawners" index="13" instance=ExtResource( 6 )]
+
+position = Vector2( 3235.55, 463.04 )
+section_type = 2
+spawn_interval = 2.0
+
+[node name="SpawnKiosk5" parent="Spawners" index="14" instance=ExtResource( 6 )]
+
+position = Vector2( 1366.25, 324.041 )
+section_type = 2
+spawn_interval = 2.0
+
+[node name="SpawnKiosk10" parent="Spawners" index="15" instance=ExtResource( 6 )]
+
+position = Vector2( 3237.02, 329.253 )
+section_type = 2
+spawn_interval = 2.0
+
+

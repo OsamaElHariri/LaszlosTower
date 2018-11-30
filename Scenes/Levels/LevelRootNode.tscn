@@ -1,0 +1,37 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Levels/LevelRootNode.gd" type="Script" id=1]
+[ext_resource path="res://Scenes/UI/PowerUpsPanel.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Scenes/UI/LevelLabel.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Art/UI/GoArrow.png" type="Texture" id=4]
+
+[node name="LevelRootNode" type="Position2D" index="0"]
+
+script = ExtResource( 1 )
+description = ""
+laser = 10
+pulse = 10
+teleport = 10
+train = 10
+
+[node name="PowerUpsPanel" parent="." index="0" instance=ExtResource( 2 )]
+
+editor/display_folded = true
+
+[node name="LevelLabel" parent="PowerUpsPanel" index="4" instance=ExtResource( 3 )]
+
+margin_left = 100.0
+margin_top = 452.0
+margin_right = 366.0
+margin_bottom = 518.0
+
+[node name="GoArrow" type="Sprite" parent="." index="1"]
+
+modulate = Color( 1, 1, 1, 0.535922 )
+position = Vector2( 208.162, 132.133 )
+scale = Vector2( 0.241643, 0.241643 )
+z_index = -101
+texture = ExtResource( 4 )
+_sections_unfolded = [ "Visibility", "Z Index" ]
+
+
