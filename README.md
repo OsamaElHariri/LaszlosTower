@@ -1,13 +1,16 @@
-This is a game I made for the Game Off 2018 game jam.
+## Laszlo's Tower
 
-A top down game where you combine different 
-power ups into one tower and use them to progress!
+A top down game where you combine different power ups into one tower and use them to progress! This is a game I made for the [Game Off 2018](https://itch.io/jam/game-off-2018) game jam.
 
+## Download the Game!
+The game is available on itch.io here: [Laszlo's Tower](https://yamsandbread.itch.io/laszlos-tower)
 
+## Software used
 This game was made with Godot (v3.0)
 I made the art using Inkscape
 I edited the sounds in Audacity
 
+## Sound and Music Credits
 These are the sounds used:
 
 Background Music:
